@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+	<!-- 	css -->
+	<link rel="stylesheet" type="text/css" href="src/app/client/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="src/app/client/js/lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="src/app/client/js/lib/angular-bootstrap/ui-bootstrap-csp.css">
+	
+<!-- 	bower components -->
+	<script type="text/javascript" src="src/app/client/js/lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="src/app/client/js/lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="src/app/client/js/lib/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="src/app/client/js/lib/underscore/underscore-min.js"></script>
+	
+<!-- 	app -->
+	<script type="text/javascript" src="src/app/client/js/app.js"></script>
+	<script type="text/javascript" src="src/app/client/js/route.config.js"></script>
+
+<!-- 	controllers -->
+	<script type="text/javascript" src="src/app/client/js/controllers/main.controller.js"></script>
+	<script type="text/javascript" src="src/app/client/js/controllers/welcome.controller.js"></script>
+	
+<!-- 	services -->
+	<script type="text/javascript" src="src/app/client/js/services/notification.service.js"></script>
+
+<!-- 	directives -->
+
+</head>
+
+	<title>The Road Home</title>
+	
+<body ng-controller="MainController as vm">
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">
+					The Road Home
+				</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li><a href="#/incidents">Incidents</a></li>
+					<li><a href="#/shift-reports">Shift Reports</a></li>
+					<li><a href="#/shift-reports">Admin</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="main-content">
+		<div class="container-fluid">
+			<ng-view></ng-view>
+		</div>	
+	</div>
+
+	<div class="notification-container">
+		<div 
+			data-ng-repeat="n in vm.getActiveNotifications() track by $index"
+			class="shadow alert" data-ng-class="vm.getNotificationClass(n)">
+			<span
+				data-ng-click="vm.removeNotification(n);" 
+				class="glyphicon glyphicon-remove pull-right"></span>
+			<h4>{{ n.title }}</h4>
+			<p>{{ n.text }}</p>
+			<p data-ng-repeat="line in n.lines track by $index">{{ line }}</p>
+		</div>
+	</div>
+
+</body>
+</html>

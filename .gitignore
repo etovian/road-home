@@ -21,5 +21,9 @@
 # brackets
 .brackets.json
 
-# src
-/src/
+# js libraries
+/src/app/client/js/lib
+
+# mac
+Icon\r\r
+.DS_Store

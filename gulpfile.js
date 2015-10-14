@@ -25,7 +25,7 @@ gulp.task('serve', ['watch'], function() {
     injectChanges: true,
     logFileChanges: false,
     logLevel: 'silent',
-    logPrefix: 'scsmNavigation',
+    logPrefix: 'road-home',
     notify: true,
     reloadDelay: 0,
     server: {
