@@ -20,3 +20,6 @@
 
 # brackets
 .brackets.json
+
+# src
+/src/
