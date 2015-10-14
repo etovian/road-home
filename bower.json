@@ -1,0 +1,21 @@
+{
+  "name": "scsmNavigation",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.13.4",
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "underscore": "~1.8.3"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
