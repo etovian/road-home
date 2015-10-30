@@ -7,11 +7,11 @@
 	<!-- 	css -->
 	<link rel="stylesheet" type="text/css" href="src/app/client/styles/main.css">
 	<link rel="stylesheet" type="text/css" href="src/app/client/js/lib/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="src/app/client/js/lib/angular-bootstrap/ui-bootstrap-csp.css">
 	
 <!-- 	bower components -->
+	<script type="text/javascript" src="src/app/client/js/lib/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="src/app/client/js/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="src/app/client/js/lib/angular/angular.min.js"></script>
-	<script type="text/javascript" src="src/app/client/js/lib/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script type="text/javascript" src="src/app/client/js/lib/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="src/app/client/js/lib/underscore/underscore-min.js"></script>
 	
@@ -25,31 +25,19 @@
 	
 <!-- 	services -->
 	<script type="text/javascript" src="src/app/client/js/services/notification.service.js"></script>
+	<script type="text/javascript" src="src/app/client/js/services/navigation.service.js"></script>
 
 <!-- 	directives -->
-
-</head>
+	<script type="text/javascript" src="src/app/client/js/directives/main.menu.directive.js"></script>
 
 	<title>The Road Home</title>
+</head>
+
+	
 	
 <body ng-controller="MainController as vm">
 	
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand">
-					The Road Home
-				</a>
-			</div>
-			<div>
-				<ul class="nav navbar-nav">
-					<li><a href="#/incidents">Incidents</a></li>
-					<li><a href="#/shift-reports">Shift Reports</a></li>
-					<li><a href="#/shift-reports">Admin</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<trh-main-menu></trh-main-menu>
 
 	<div class="main-content">
 		<div class="container-fluid">

@@ -13,7 +13,7 @@ body {
 
 .notification-container {
 	position: fixed;
-	bottom: 80px;
+	bottom: 25px;
 	right: 25px;
 	width: 400px;
 	z-index: 10000;
