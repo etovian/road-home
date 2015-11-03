@@ -1,5 +1,5 @@
 (function() {
-	angular.module('app').controller('MainController', ['notificationService', MainController]);
+	angular.module('app').controller('MainController', ['NotificationService', MainController]);
 
 	function MainController(notificationService) {
 		var vm = this;
@@ -10,14 +10,11 @@
 			},
 			getNotificationClass: function(notification) {
 				return notificationService.getNotificationClass(notification);
+			},
+			removeNotification: function(notification) {
+				notificationService.remove(notification);
 			}
-		});
-		
-		notificationService.add({
-			title: 'Howdy!',
-			text: 'Welcome to the Road Home',
-			type: notificationService.NOTIFICATION_TYPES.SUCCESS
-		});
+		});		
 	}
 
 })();

@@ -1,0 +1,15 @@
+<h2>Incident List</h2>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12">
+			<div ui-grid="vm.getGridOptions()" ui-grid-selection></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<a ng-if="vm.selectedIncident" href="#/incident-edit/{{ vm.selectedIncident.id }}">Edit Selected Incident</a>
+		</div>
+	</div>
+</div>
+

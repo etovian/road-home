@@ -1,0 +1,94 @@
+[
+	{
+		"id": 1,
+		"created": "2015-11-02T07:00:00.000Z",
+		"createdBy": "mike.green",
+		"incidentDate": "2015-11-02T07:00:00.000Z",
+		"incidentTime": "2015-11-02T23:15:00.000Z",
+		"location": {
+			"id": 1,
+			"description": "Main - Accounting Office"
+		},
+		"involvedPeopleTypes": [
+			{
+				"id": 1,
+				"description": "Client(s)"
+			},
+			{
+				"id": 2,
+				"description": "Staff"
+			}
+		],
+		"involvedPeople": [
+		],
+		"category": {
+			"id": 1,
+			"description": "Body Fluid Spill"
+		},
+		"description": "The accountant couldn't make it to the loo.",
+		"called911": false,
+		"emailed": "???not sure what data type",
+		"appendMessage": "Should this be a related collection of messages (ie, a discussion)?",
+		"appendedBy": "mike.green"
+	},
+	{
+		"id": 2,
+		"created": "2015-11-02T07:00:00.000Z",
+		"createdBy": "mike.green",
+		"incidentDate": "2015-11-02T07:00:00.000Z",
+		"incidentTime": "2015-11-02T16:23:00.000Z",
+		"location": {
+			"id": 6,
+			"description": "Main - Break Room"
+		},
+		"involvedPeopleTypes": [
+			{
+				"id": 2,
+				"description": "Staff"
+			}
+		],
+		"involvedPeople": [
+		],
+		"category": {
+			"id": 4,
+			"description": "Drug Paraphanelia"
+		},
+		"description": "That's not mine.  I was holding it for a friend.",
+		"called911": true,
+		"emailed": "???not sure what data type",
+		"appendMessage": "Should this be a related collection of messages (ie, a discussion)?",
+		"appendedBy": "mike.green"
+	},
+	{
+		"id": 3,
+		"created": "2015-11-02T07:00:00.000Z",
+		"createdBy": "mike.green",
+		"incidentDate": "2015-11-02T07:00:00.000Z",
+		"incidentTime": "2015-11-02T00:49:00.000Z",
+		"location": {
+			"id": 18,
+			"description": "Main - Family Park Area"
+		},
+		"involvedPeopleTypes": [
+			{
+				"id": 1,
+				"description": "Client(s)"
+			},
+			{
+				"id": 2,
+				"description": "Staff"
+			}
+		],
+		"involvedPeople": [
+		],
+		"category": {
+			"id": 26,
+			"description": "Inappropriate Behavior"
+		},
+		"description": "No touching!",
+		"called911": false,
+		"emailed": "???not sure what data type",
+		"appendMessage": "Should this be a related collection of messages (ie, a discussion)?",
+		"appendedBy": "mike.green"
+	}
+]

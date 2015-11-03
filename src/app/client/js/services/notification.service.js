@@ -2,7 +2,7 @@
 
 	angular
 		.module("app")
-		.factory("notificationService", NotificationService);
+		.factory("NotificationService", NotificationService);
 	
 	function NotificationService($timeout) {
 		
