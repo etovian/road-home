@@ -20,6 +20,11 @@
 				controller: 'IncidentListController',
 				controllerAs: 'vm'
 			})
+			.when('/incident-add', {
+				templateUrl: templatesPath + 'incident.add.html',
+				controller: 'IncidentAddController',
+				controllerAs: 'vm'
+			})
 			.when('/incident-edit/:incidentId', {
 				templateUrl: templatesPath + 'incident.edit.html',
 				controller: 'IncidentEditController',

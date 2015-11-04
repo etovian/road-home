@@ -7,7 +7,8 @@
 	function IncidentFormDirective() {
 		return {
 			scope: {
-				incident: '=trhIncident'
+				incident: '=trhIncident',
+				buttons: '=trhIncidentFormButtons'
 			},
 			templateUrl: 'app/client/views/directives/incident.form.html',
 			controller: ['IncidentService', IncidentFormDirectiveController],

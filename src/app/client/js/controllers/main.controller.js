@@ -1,7 +1,7 @@
 (function() {
-	angular.module('app').controller('MainController', ['NotificationService', MainController]);
+	angular.module('app').controller('MainController', ['NotificationService', 'IncidentService', MainController]);
 
-	function MainController(notificationService) {
+	function MainController(notificationService, incidentService) {
 		var vm = this;
 
 		angular.extend(vm, {
@@ -14,7 +14,9 @@
 			removeNotification: function(notification) {
 				notificationService.remove(notification);
 			}
-		});		
+		});
+
+		incidentService.initialize();
 	}
 
 })();

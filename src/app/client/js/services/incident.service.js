@@ -12,7 +12,31 @@
 		var locations = [];
 
 		var service = {
-
+			addIncident: function(incident) {
+				var deferred = $q.defer();
+				incidents.push(incident);
+				deferred.resolve(incident);
+				notificationService.add({
+					text: 'Incident added',
+					title: 'Success!',
+					type: notificationService.NOTIFICATION_TYPES.SUCCESS
+				});
+				return deferred.promise;
+			},
+			createNewIncident: function() {
+				var incident = {
+					id: incidents.length + 1,
+					created: new Date(),
+					createdBy: 'admin.user',
+					incidentDate: new Date(),
+					incidentTime: new Date(),
+					location: null,
+					category: null,
+					description: '',
+					called911: false
+				};
+				return incident;
+			},
 			getCategories: function() {
 				var deferred = $q.defer();
 				if(categories.length > 0) {
@@ -57,6 +81,11 @@
 						});
 				}
 				return deferred.promise;
+			},
+			initialize: function() {
+				this.requestIncidents();
+				this.getCategories();
+				this.getLocations();
 			},
 			processIncidentDates: function(incidentArray) {
 				incidentArray.forEach(function(incident) {

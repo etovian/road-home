@@ -48,17 +48,7 @@
 			}
 		});
 
-		incidentService.requestIncidents()
-			.then(function() {
-				
-				vm.gridOptions.data = incidentService.getIncidents();
-
-				notificationService.add({
-					title: 'Incidents',
-					text: 'There are ' + vm.gridOptions.data.length + ' incidents.',
-					type: notificationService.NOTIFICATION_TYPES.DANGER
-				});
-			});
+		vm.gridOptions.data = incidentService.getIncidents();
 	}
 
 })();
