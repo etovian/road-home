@@ -113,6 +113,16 @@
 					.then(function(response) {
 						incidents = self.processIncidentDates(response.data);
 					});
+			},
+			saveIncident: function(incident) {
+				var deferred = $q.defer();
+				deferred.resolve(incident);
+				notificationService.add({
+					text: 'Incident saved',
+					title: 'Success!',
+					type: notificationService.NOTIFICATION_TYPES.SUCCESS
+				});
+				return deferred.promise;
 			}
 		};
 

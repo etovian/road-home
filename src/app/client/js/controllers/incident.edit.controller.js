@@ -8,7 +8,26 @@
 
 		var vm = this;
 		angular.extend(vm, {
-			incident: null
+			incident: null,
+			incidentFormButtons: [
+				{
+					click: function() {
+						$location.path('/incident-list');
+					},
+					cssClass: 'btn-danger',
+					text: 'Cancel'
+				},
+				{
+					click: function() {
+						incidentService.saveIncident(vm.incident)
+							.then(function(/*incident*/) {
+								$location.path('/incident-list');
+							});
+					},
+					cssClass: 'btn-default',
+					text: 'Save'
+				}
+			]
 		});
 
 		incidentService.getIncidentById(+$routeParams.incidentId)

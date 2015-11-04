@@ -11,6 +11,13 @@
 			incidentFormButtons: [
 				{
 					click: function() {
+						$location.path('/incident-list');
+					},
+					cssClass: 'btn-danger',
+					text: 'Cancel'
+				},
+				{
+					click: function() {
 						incidentService.addIncident(vm.incident)
 							.then(function(/*incident*/) {
 								$location.path('/incident-list');
