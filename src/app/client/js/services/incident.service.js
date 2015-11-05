@@ -6,7 +6,7 @@
 
 	function IncidentService($http, $q, notificationService) {
 
-		var BASE_URL = '/src/app/server/dev-data/';
+		var BASE_URL = 'dev-data/';
 		var categories = [];
 		var incidents = [];
 		var locations = [];

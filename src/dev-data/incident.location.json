@@ -1,0 +1,286 @@
+[
+    {
+        "id":1,
+        "description":"Main - Accounting Office"
+    },
+    {
+        "id":2,
+        "description":"Main - Administration Area"
+    },
+    {
+        "id":3,
+        "description":"Main - All Shelter"
+    },
+    {
+        "id":4,
+        "description":"Main - Bag and Tag Closet"
+    },
+    {
+        "id":5,
+        "description":"Main - Board Room"
+    },
+    {
+        "id":6,
+        "description":"Main - Break Room"
+    },
+    {
+        "id":7,
+        "description":"Main - Case Manager Stairwell"
+    },
+    {
+        "id":8,
+        "description":"Main - Development Office"
+    },
+    {
+        "id":9,
+        "description":"Main - Emergency Exit by Board Room"
+    },
+    {
+        "id":10,
+        "description":"Main - Family Courtyard"
+    },
+    {
+        "id":11,
+        "description":"Main - Family Crisis Dorm"
+    },
+    {
+        "id":12,
+        "description":"Main - Family Dayroom"
+    },
+    {
+        "id":13,
+        "description":"Main - Family Hallways"
+    },
+    {
+        "id":14,
+        "description":"Main - Family Kitchen"
+    },
+    {
+        "id":15,
+        "description":"Main - Family Laundry Room"
+    },
+    {
+        "id":16,
+        "description":"Main - Family Lobby"
+    },
+    {
+        "id":17,
+        "description":"Main - Family Men's Restroom"
+    },
+    {
+        "id":18,
+        "description":"Main - Family Park Area"
+    },
+    {
+        "id":19,
+        "description":"Main - Family Resident Room"
+    },
+    {
+        "id":20,
+        "description":"Main - Family Shelter Playground"
+    },
+    {
+        "id":21,
+        "description":"Main - Family Women's Restroom"
+    },
+    {
+        "id":22,
+        "description":"Main - Housing Office  - West"
+    },
+    {
+        "id":23,
+        "description":"Main - Housing Office - East"
+    },
+    {
+        "id":24,
+        "description":"Main - Intake Office - Downstairs"
+    },
+    {
+        "id":25,
+        "description":"Main - Intake Office - Upstairs"
+    },
+    {
+        "id":26,
+        "description":"Main - IT Office"
+    },
+    {
+        "id":27,
+        "description":"Main - Men's Day Room"
+    },
+    {
+        "id":28,
+        "description":"Main - Men's desk"
+    },
+    {
+        "id":29,
+        "description":"Main - Men's Emergency Shelter"
+    },
+    {
+        "id":30,
+        "description":"Main - Men's Emergency Stairwell"
+    },
+    {
+        "id":31,
+        "description":"Main - Men's Entrance Ramp"
+    },
+    {
+        "id":32,
+        "description":"Main - Men's Hallways"
+    },
+    {
+        "id":33,
+        "description":"Main - Men's Laundry Room"
+    },
+    {
+        "id":34,
+        "description":"Main - Men's Lobby"
+    },
+    {
+        "id":35,
+        "description":"Main - Men's MEE, MDX and MSN Dorm"
+    },
+    {
+        "id":36,
+        "description":"Main - MENS PHONE"
+    },
+    {
+        "id":37,
+        "description":"Main - Men's Restroom"
+    },
+    {
+        "id":38,
+        "description":"Main - Men's Self-Sufficiency Area"
+    },
+    {
+        "id":39,
+        "description":"Main - Outside Family Entrance"
+    },
+    {
+        "id":40,
+        "description":"Main - Outside Men's Entrance"
+    },
+    {
+        "id":41,
+        "description":"Main - Outside Women's Entrance"
+    },
+    {
+        "id":42,
+        "description":"Main - Overflow Van"
+    },
+    {
+        "id":43,
+        "description":"Main - Parking Area"
+    },
+    {
+        "id":44,
+        "description":"Main - Roof"
+    },
+    {
+        "id":45,
+        "description":"Main - Roof Access Room"
+    },
+    {
+        "id":46,
+        "description":"Main - Services Office"
+    },
+    {
+        "id":47,
+        "description":"Main - Staff Restroom"
+    },
+    {
+        "id":48,
+        "description":"Main - Warehouse"
+    },
+    {
+        "id":49,
+        "description":"Main - WEE/WES Dorm"
+    },
+    {
+        "id":50,
+        "description":"Main - West Side of Building -  Outside"
+    },
+    {
+        "id":51,
+        "description":"Main - WLM Dorm"
+    },
+    {
+        "id":52,
+        "description":"Main - Women's Day Room"
+    },
+    {
+        "id":53,
+        "description":"Main - Women's Emergency Shelter"
+    },
+    {
+        "id":54,
+        "description":"Main - Women's Kitchen"
+    },
+    {
+        "id":55,
+        "description":"Main - Women's Laundry Room"
+    },
+    {
+        "id":56,
+        "description":"Main - Women's Lobby"
+    },
+    {
+        "id":57,
+        "description":"Main - Women's Patio"
+    },
+    {
+        "id":58,
+        "description":"Main - Women's Restroom"
+    },
+    {
+        "id":59,
+        "description":"Main - Women's Stairwell"
+    },
+    {
+        "id":60,
+        "description":"Midvale - Case Manager Area"
+    },
+    {
+        "id":61,
+        "description":"Midvale - Clothing Area"
+    },
+    {
+        "id":62,
+        "description":"Midvale - Family Shelter"
+    },
+    {
+        "id":63,
+        "description":"Midvale - Laundry"
+    },
+    {
+        "id":64,
+        "description":"Midvale - Operations area"
+    },
+    {
+        "id":65,
+        "description":"Midvale - Outside Areas"
+    },
+    {
+        "id":66,
+        "description":"Midvale - Playroom"
+    },
+    {
+        "id":67,
+        "description":"Midvale - Reception"
+    },
+    {
+        "id":68,
+        "description":"Midvale - Restroom"
+    },
+    {
+        "id":69,
+        "description":"St. Vincents - Breezeway"
+    },
+    {
+        "id":70,
+        "description":"St. Vincents - Main"
+    },
+    {
+        "id":71,
+        "description":"Weigand - Emergency Services Office"
+    }
+]

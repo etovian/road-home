@@ -10,7 +10,7 @@
 				incident: '=trhIncident',
 				buttons: '=trhIncidentFormButtons'
 			},
-			templateUrl: 'app/client/views/directives/incident.form.html',
+			templateUrl: 'directives/incident.form.html',
 			controller: ['IncidentService', IncidentFormDirectiveController],
 			controllerAs: 'vm',
 			bindToController: true

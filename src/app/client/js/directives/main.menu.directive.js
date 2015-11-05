@@ -8,7 +8,7 @@
 			scope: {
 
 			},
-			templateUrl: 'app/client/views/directives/main.menu.html',
+			templateUrl: 'directives/main.menu.html',
 			controller: ['navigationService', MainMenuDirectiveController],
 			controllerAs: 'vm',
 			bindToController: true

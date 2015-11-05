@@ -7,7 +7,7 @@
 
 	function Config($routeProvider) {
 
-		var templatesPath = 'src/app/client/views/templates/';
+		var templatesPath = 'templates/';
 
 		$routeProvider
 			.when('/welcome', {

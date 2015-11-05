@@ -1,5 +1,5 @@
 {
-  "name": "scsmNavigation",
+  "name": "road-home",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.config.js",
@@ -12,8 +12,13 @@
     "browser-sync": "^2.9.8",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.8.0",
     "gulp-debug": "^2.1.0",
     "gulp-inject": "^3.0.0",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-useref": "^2.0.1",
+    "gulp-util": "^3.0.7",
     "superstatic": "^2.2.1"
   }
 }

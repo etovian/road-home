@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" href="styles/all.css">
+
+    <script src="js/all.js"></script>
+
+    <title>The Road Home</title>
+</head>
+
+<body ng-controller="MainController as vm">
+    <trh-main-menu></trh-main-menu>
+    <div class="main-content">
+        <div class="container-fluid">
+            <ng-view></ng-view>
+        </div>
+    </div>
+    <div class="notification-container">
+        <div data-ng-repeat="n in vm.getActiveNotifications() track by $index" class="shadow alert" data-ng-class="vm.getNotificationClass(n)">
+            <span data-ng-click="vm.removeNotification(n);" class="glyphicon glyphicon-remove pull-right"></span>
+            <h4>{{ n.title }}</h4>
+            <p>{{ n.text }}</p>
+            <p data-ng-repeat="line in n.lines track by $index">{{ line }}</p>
+        </div>
+    </div>
+</body>
+
+</html>
