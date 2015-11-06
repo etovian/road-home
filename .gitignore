@@ -7,6 +7,7 @@
 # gulp build
 /build/
 /.tmp/
+/dist/js
 /dist/docs/
 /dist/sample/
 /dist/reports/

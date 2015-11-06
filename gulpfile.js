@@ -11,29 +11,31 @@
         Config = require('./gulpfile.config'),
         browserSync = require('browser-sync'),
         superstatic = require('superstatic'),
-        $ = require('gulp-load-plugins')({lazy: true});
+        $ = require('gulp-load-plugins')({
+            lazy: true
+        });
 
     var config = new Config();
 
     //clean
     gulp.task('clean', ['clean-css', 'clean-html', 'clean-js', 'clean-dev-data'], function() {
-      //run all the clean tasks
+        //run all the clean tasks
     });
 
     gulp.task('clean-css', function(done) {
-      clean(config.distCss, done);
+        clean(config.distCss, done);
     });
 
     gulp.task('clean-dev-data', function(done) {
-      clean(config.distDevDataDirectory + '**/*.*', done);
+        clean(config.distDevDataDirectory + '**/*.*', done);
     });
 
     gulp.task('clean-html', function(done) {
-      clean(config.distHtml, done);
+        clean(config.distHtml, done);
     });
 
     gulp.task('clean-js', function(done) {
-      clean(config.distJavaScript, done);
+        clean(config.distJavaScript, done);
     });
 
     //build dist
@@ -43,24 +45,25 @@
         //     .pipe(gulp.dest(config.dist));
         var assets = $.useref.assets();
         return gulp.src(config.index)
-          .pipe(assets)
-          .pipe(assets.restore())
-          .pipe($.useref())
-          .pipe(gulp.dest(config.dist));
+            .pipe(assets)
+            .pipe(assets.restore())
+            .pipe($.useref())
+            .pipe(gulp.dest(config.dist));
     });
 
     gulp.task('view-cache', function() {
         return gulp.src(config.views)
-          .pipe($.angularTemplatecache(
-            config.templateCache.fileName,
-            config.templateCache.options
-          )).pipe(gulp.dest(config.clientJavaScriptDirectory));
+            .pipe($.minifyHtml({empty: true}))
+            .pipe($.angularTemplatecache(
+                config.templateCache.fileName,
+                config.templateCache.options
+            )).pipe(gulp.dest(config.clientJavaScriptDirectory));
     });
 
     gulp.task('dev-data', function() {
         log('moving dev data');
         return gulp.src(config.sourceDevData)
-          .pipe(gulp.dest(config.distDevDataDirectory));
+            .pipe(gulp.dest(config.distDevDataDirectory));
     });
 
     //server
@@ -96,15 +99,15 @@
     }
 
     function log(message) {
-    if (typeof(message) === 'object') {
-        for (var key in message) {
-            if (message[key]) {
-                $.util.log($.util.colors.blue(message[key]));
+        if (typeof(message) === 'object') {
+            for (var key in message) {
+                if (message[key]) {
+                    $.util.log($.util.colors.blue(message[key]));
+                }
             }
+        } else {
+            $.util.log($.util.colors.blue(message));
         }
-    } else {
-        $.util.log($.util.colors.blue(message));
     }
-}
 
 })();
