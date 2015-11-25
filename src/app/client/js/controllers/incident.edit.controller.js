@@ -1,10 +1,10 @@
 (function() {
 
 	'use strict';
+	var deps = ['$location', '$routeParams', 'IncidentService', 'NotificationService', '$aside', IncidentEditController];
+	angular.module('app').controller('IncidentEditController', deps);
 
-	angular.module('app').controller('IncidentEditController', ['$location', '$routeParams', 'IncidentService', IncidentEditController]);
-
-	function IncidentEditController($location, $routeParams, incidentService) {
+	function IncidentEditController($location, $routeParams, incidentService, notificationService, $aside) {
 
 		var vm = this;
 		angular.extend(vm, {
@@ -14,8 +14,15 @@
 					click: function() {
 						$location.path('/incident-list');
 					},
-					cssClass: 'btn-danger',
+					cssClass: 'btn-warning',
 					text: 'Cancel'
+				},
+				{
+					click: function() {
+						vm.deletion.getConfirmation();
+					},
+					cssClass: 'btn-danger',
+					text: 'Delete'
 				},
 				{
 					click: function() {
@@ -24,10 +31,40 @@
 								$location.path('/incident-list');
 							});
 					},
-					cssClass: 'btn-default',
+					cssClass: 'btn-primary',
 					text: 'Save'
 				}
-			]
+			],
+			deletion: {
+				asideOpenOptions: {
+					templateUrl: 'templates/confirm.delete.sidebar.html',
+					controller: 'ConfirmDeleteSidebarController',
+					controllerAs: 'vm',
+					bindToController: true,
+					placement: 'bottom',
+					resolve: {
+						message: function() {
+							return 'Are you sure you want to delete this incident?';
+						}
+					},
+					size: 'sm'
+				},
+				cancel: function() {
+					notificationService.add({
+						title: 'Delete Canceled',
+						text: 'The incident was not deleted.',
+						type: notificationService.NOTIFICATION_TYPES.INFO
+					});
+				},
+				confirm: function() {
+					incidentService.deleteIncident(vm.incident).then(function() {
+						$location.path('/incident-list');
+					});
+				},
+				getConfirmation: function() {
+					$aside.open(vm.deletion.asideOpenOptions).result.then(vm.deletion.confirm, vm.deletion.cancel);
+				}				
+			}
 		});
 
 		incidentService.getIncidentById(+$routeParams.incidentId)

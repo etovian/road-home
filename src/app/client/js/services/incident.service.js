@@ -37,6 +37,17 @@
 				};
 				return incident;
 			},
+			deleteIncident: function(incident) {
+				var deferred = $q.defer();
+				deferred.resolve(incident);
+				incidents = _.without(incidents, incident);
+				notificationService.add({
+					title: 'Incident Deleted',
+					text: 'The incident was removed from the system.',
+					type: notificationService.NOTIFICATION_TYPES.DANGER
+				});
+				return deferred.promise;
+			},
 			getCategories: function() {
 				var deferred = $q.defer();
 				if(categories.length > 0) {
