@@ -6,5 +6,4 @@ $templateCache.put("templates/incident.edit.html","<h2>Incident Edit</h2><div cl
 $templateCache.put("templates/incident.list.html","<h2>Incident List</h2><div class=container-fluid><div class=row><div class=col-sm-12><div ui-grid=vm.getGridOptions() ui-grid-selection></div></div></div><div class=row><div class=col-sm-12><a ng-if=vm.selectedIncident href=\"#/incident-edit/{{ vm.selectedIncident.id }}\">Edit Selected Incident</a></div></div></div>");
 $templateCache.put("templates/shift.report.edit.html","Shift Report Edit");
 $templateCache.put("templates/shift.report.list.html","Shift Report List");
-$templateCache.put("templates/test.sidebar.html","<h1>Howdy!</h1><p>I am a sidebar! Weeeee!</p><div class=btn-group><button ng-click=vm.close() class=\"btn btn-default\">Close Me!</button> <button ng-click=vm.cancel() class=\"btn btn-default\">Cancel Me!</button></div>");
-$templateCache.put("templates/welcome.html","Howdy!");}]);
+$templateCache.put("templates/welcome.html","Welcome to The Road Home");}]);
