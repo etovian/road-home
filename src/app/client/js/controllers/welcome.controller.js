@@ -5,7 +5,7 @@
 		var vm = this;
 
 		angular.extend(vm, {
-			
+			//test
 		});
 	}
 
